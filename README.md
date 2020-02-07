@@ -1,2 +1,2 @@
 # Week--UrnModels
-Code for simulation of Urn models
+This repository contains the pseudocode for simulation of Urn models
