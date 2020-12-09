@@ -1,0 +1,61 @@
+---
+title: "UrnPseudocode"
+author: "Paul M"
+date: "12/9/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Pseudocde for Urn problem (first part)
+
+As ever, set the random number seed for reproducibility
+```{r GoodHabits}
+set.seed(16)
+```
+
+Define your variables
+```{r}
+# How many balls do we start with
+InitialNumberOfBalls <- 2
+# How many balls do we need eventually
+TargetNumberOfBalls <- 10
+```
+
+Now write a function to simulate the Urn model
+```{r urn}
+UrnSim <- function(InitialNBalls, TargetNBalls){
+  # set up the initial state of the urn
+  Urn<-rep("NoBall",TargetNBalls)
+
+  # we will start with two balls of different colors: "red" and "blue"
+  # The first element of Urn should be set to "red", the second element should be set to "blue" (say)
+
+
+  # set up a counter (NumberOfBalls) to keep track of how many balls we have
+  NumberOfBalls<-sum(Urn=="red")+sum(Urn=="blue")
+
+  # set-up a loop that pulls a ball from the urn and takes the appropriate action
+  while (NumberOfBalls<TargetNBalls){
+  	# draw a ball (WhichBall)
+  	# return the ball and add another one like it
+  	# increase the counter of how many balls we have in the urn
+  }
+
+  # return some summary of what is in the urn when we are done (e.g. number of red balls)
+}
+```
+
+Now run the function...
+```{r test}
+NumTrials <- 1000   # how many urns to simulate
+TrialResults <- rep(0,NumTrials) # somewhere to put the results
+for(i in 1:length(TrialResults)){
+  TrialResults[i] <- UrnSim(InitialNumberOfBalls,TargetNumberOfBalls)
+}
+```
+
+And then summarize the results to see how they look.
+
