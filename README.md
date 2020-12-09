@@ -1,4 +1,4 @@
-# Week--UrnModels
+# Week4--UrnModels
 This repository contains the pseudocode for simulation of Urn models
 
 Here are the results I got from my code for Urn Task 5, where the weight of the black ball varies.
